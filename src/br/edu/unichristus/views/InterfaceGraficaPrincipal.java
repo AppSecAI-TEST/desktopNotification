@@ -43,7 +43,7 @@ public class InterfaceGraficaPrincipal extends JFrame {
 			System.out.println("isSupported");
 			this.systemTray = SystemTray.getSystemTray();
 
-			Image image = Toolkit.getDefaultToolkit().getImage("icone.ico");
+			Image image = Toolkit.getDefaultToolkit().getImage("resources/printer.png");
 
 			ActionListener exitActionListener = new ActionListener() {
 
@@ -116,8 +116,11 @@ public class InterfaceGraficaPrincipal extends JFrame {
 			}
 		});
 
-		setIconImage(Toolkit.getDefaultToolkit().getImage("icone.ico"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("resources/printer.png"));
+		windowPropreties();
+	}
 
+	private void windowPropreties() {
 		setVisible(true);
 		setSize(300, 200);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
